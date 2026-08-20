@@ -1,0 +1,14 @@
+{
+  "name": "rory-platform",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "check": "node --check workers/app/src/index.js && node --check workers/app/public/site.js",
+    "deploy:app": "wrangler deploy --config workers/app/wrangler.toml",
+    "deploy:mail": "wrangler deploy --config workers/mail-router/wrangler.toml"
+  },
+  "devDependencies": {
+    "wrangler": "^4.10.0"
+  }
+}
